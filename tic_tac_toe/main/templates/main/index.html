@@ -1,0 +1,29 @@
+{% extends 'main/wrapper.html' %}
+
+{% load static %}
+{% block static_links %}
+{% endblock %}
+
+
+{% block content %}
+<h1 class="text-center">Tic tac toe - Django</h1>
+<div>
+    <div style="width: 80%;" >
+        <input class="form-control" s="text"id="nick" placeholder="Nickname">
+    </div>
+    <input type="color" id="color" style="float: right; margin-top: -38px; height: 40px; width: 40px;" name="head" value="#ff00ff">
+</div>
+<h5 width="width: 100%" class="mt-2">List games: <a class="float-end" href="/new/">Create Room</a> </h5>
+<div id="rooms">
+    {% for i in games %}
+    <div>
+        <a href="/join/{{i.code_game}}">{{i.user1}}</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+{% block scripts_links %}
+<script src="{% static 'main/js/index.js' %}"></script>
+{% endblock %}

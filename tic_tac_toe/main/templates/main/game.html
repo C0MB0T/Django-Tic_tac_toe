@@ -1,0 +1,82 @@
+{% extends 'main/wrapper.html' %}
+
+{% load static %}
+{% block static_links %}
+{% endblock %}
+
+
+{% block content %}
+<div id="turn_message">
+    <h5>
+        Your Turn
+    </h5>
+</div>
+<h1 class="text-center">Tic tac toe - Django</h1>
+
+<div class="row" id="battle">
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+   <div class="col-4 p-2">
+       <div id="cont">
+           <div id="dummy"></div>
+           <div id="elem"></div>
+       </div>
+   </div>
+</div>
+
+{% endblock %}
+
+
+{% block scripts_links %}
+<script>
+var code_game = '{{code_game}}';
+var game_user = '{{game_user}}';
+</script>
+<script src="{% static 'main/js/game.js' %}"></script>
+{% endblock %}
